@@ -1,38 +1,63 @@
-.App {
+
+
+/* Estilos para el contenedor principal */
+.juego-container {
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilos para los encabezados */
+h1 {
+  font-size: 24px;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-size: 18px;
+  color: #555;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Estilos para el input */
+input {
+  padding: 6px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-color: #e74c3c;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilos para los marcadores */
+.marcadores {
+  margin-top: 25px;
+  border-color: blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos para los botones */
+.botones button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botones button img {
+  max-width: 100px;
+}
+
+/* Estilos para el resultado */
+.resultado {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Estilos para el botón de reinicio */
+.resultado button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
