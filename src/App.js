@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import piedraImg from './assets/piedra.jpg';
-import papelImg from './assets/papel.jpg';
-import tijerasImg from './assets/tijeras.jpg';
+
 import './App.css';
+import Marcadores from "./component/Marcadores.jsx";
+import Botones from "./component/Botones.jsx";
 
 const JuegoPiedraPapelTijeras = () => {
   const opciones = ['piedra', 'papel', 'tijeras'];
@@ -90,22 +90,13 @@ const JuegoPiedraPapelTijeras = () => {
         value={jugadorNombre}
         onChange={handleNombreChange}
       />
-      <div className='marcadores'>
-        <h2>Marcadores</h2>
-        <p>Jugador: {marcadorJugador}</p>
-        <p>Computadora: {marcadorComputadora}</p>
-      </div>
-      <div className='botones'>
-        <button onClick={() => jugar('piedra')}>
-          <img src={piedraImg} alt="Piedra" />
-        </button>
-        <button onClick={() => jugar('papel')}>
-          <img src={papelImg} alt="Papel" />
-        </button>
-        <button onClick={() => jugar('tijeras')}>
-          <img src={tijerasImg} alt="Tijeras" />
-        </button>
-      </div>
+      
+      <Marcadores
+        marcadorJugador = {marcadorJugador}
+        marcadorComputadora = {marcadorComputadora} />
+      
+      <Botones jugar ={jugar}/>
+
       {jugadorSeleccion && (
         <div className='resultado'>
           <p>Tu elección: {jugadorSeleccion}</p>
