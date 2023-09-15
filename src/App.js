@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-
 import './App.css';
 import Marcadores from "./component/Marcadores.jsx";
 import Botones from "./component/Botones.jsx";
+import Nombre from "./component/Nombre.jsx";
+import Jugadas from './component/Jugadas';
+
 
 const JuegoPiedraPapelTijeras = () => {
   const opciones = ['piedra', 'papel', 'tijeras'];
@@ -80,15 +82,12 @@ const JuegoPiedraPapelTijeras = () => {
     setMarcadorComputadora(0);
   };
 
+// Retorno cada uno de los componentes //
   return (
     <div className="juego-container">
-      <h1>Juego Piedra, Papel o Tijeras</h1>
-      <h2>Ingresa tu nombre para jugar</h2>
-      <input
-        type="text"
-        placeholder="Ingresa tu nombre"
-        value={jugadorNombre}
-        onChange={handleNombreChange}
+      <Nombre
+        jugadorNombre={jugadorNombre}
+        handleNombreChange={handleNombreChange}
       />
       
       <Marcadores
@@ -97,13 +96,14 @@ const JuegoPiedraPapelTijeras = () => {
       
       <Botones jugar ={jugar}/>
 
-      {jugadorSeleccion && (
-        <div className='resultado'>
-          <p>Tu elección: {jugadorSeleccion}</p>
-          <p>Elección de la computadora: {computadoraSeleccion}</p>
-          <p>Resultado: {resultado}</p>
-          <button onClick={reiniciarJuego}>Reiniciar Juego</button>
-        </div>
+       {/* Componente Jugadas */}
+       {jugadorSeleccion && (
+        <Jugadas
+          jugadorSeleccion={jugadorSeleccion}
+          computadoraSeleccion={computadoraSeleccion}
+          resultado={resultado}
+          reiniciarJuego={reiniciarJuego}
+        />
       )}
     </div>
   );
