@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Piedra, papel o tijeras en React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Desarrollo
+Basando en el juego Piedra, papel o tijera realizado en HTML, CSS y Javascript, reutizamos ese codigo en React. 
 
-## Available Scripts
+Primero desarrollé todo el juego en App.js , aplicando props, Hooks useState en la reutilizacion del codigo Javascript. Luego los dividí en componentes, porque me costaba mucho al principio razonarlos por separado, hasta que poco a poco pude ir comprendiendo la lógica de React.
+He escrito la lógica que seguí en la estrucuta de App. js
+Aunque me parece que podría a ver dividido en más componentes, no pude realizarlo porque se me rompía. A pesar que  el tiempo ha sido muy acotado he tratado de hacer lo máximo que he podido, dentro de los conceptos asimilados. Es para seguir trabajando, trabajando, trabajando y mejorarlo.
 
-In the project directory, you can run:
+## No logrado en App.js
+Creé un domponente para que una vez que el usuario ingresara su nombre, se cambiara el texto "jugador" en el marcador,  por su nombre. 
+Creé una funcion para que el jugador después de colocar su nombre y jugar una partida, pueda seguir jugando sin tener que volver a ingresar su nombre. 
+A ambas no las pude hacer funcionar y lamentablemente borré y no guardé aunque sea en //...//.
 
-### `npm start`
+## CSS
+En cuanto al diseño CSS, seleccione algunas de los formatos ya realizadas en el juego anterior. Quise aplicar Styled Components, si bien comprendi la lógica en la teoría, en la práctica (debido a la falta de tiempo) se me complicó mucho, no podia darle un formato responsive y me quedaba muy feo, por ello volví al CSS original. De todas maneras con mas tiempo voy a tratar de darle un formato usando Styled Components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Recursos
+Ademas de las clases teóricas y prácticas de mi tutor y de los otros tutores del curso donde siempre encuentro puntos de vista distintos para ir resolviendo los problemas, recurrí a la información que ofrece React, tutoriales que he googleado para poder ir resolviendo cada una de las funciones.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Agradecimientos
+Agradezco al Profesor Ignacio Moretti, a mi ayudante Nehuen Aramburu y a los demás ayudantes que aunque ellos no me conocen a mi, si he seguido sus clases. A Miguel Pagano y todo FAMAT -UNC que le ponen tanta pasión y empeño a la tarea que realizan. 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

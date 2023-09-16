@@ -9,7 +9,7 @@
 /* Estilos para los encabezados */
 h1 {
   font-size: 24px;
-  color: #333;
+  color: #0d212f;
 }
 
 h2 {
@@ -35,7 +35,7 @@ input {
 .botones button {
   margin: 0 10px;
   padding: 10px 20px;
-  background-color: #3498db;
+  background-color: #0d212f;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -43,7 +43,7 @@ input {
 }
 
 .botones button img {
-  max-width: 100px;
+  max-width: 50px;
 }
 
 /* Estilos para el resultado */

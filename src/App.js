@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import './App.css';
-import Marcadores from "./component/Marcadores.jsx";
-import Botones from "./component/Botones.jsx";
-import Nombre from "./component/Nombre.jsx";
-import Jugadas from './component/Jugadas';
-
+import React, { useState } from 'react'; // Importa React y useState desde la librería React.
+import './App.css'; // Importa estilos CSS para la aplicación.
+import Marcadores from "./component/Marcadores.jsx"; // Importa el componente Marcadores desde el archivo Marcadores.jsx.
+import Botones from "./component/Botones.jsx"; // Importa el componente Botones desde el archivo Botones.jsx.
+import Nombre from "./component/Nombre.jsx"; // Importa el componente Nombre desde el archivo Nombre.jsx.
+import Jugadas from './component/Jugadas'; // Importa el componente Jugadas desde el archivo Jugadas.jsx.
 
 const JuegoPiedraPapelTijeras = () => {
+  // Define  opciones para el juego.
   const opciones = ['piedra', 'papel', 'tijeras'];
 
+  // Define los estados iniciales utilizando el hook useState.
   const [jugadorNombre, setJugadorNombre] = useState('');
   const [jugadorSeleccion, setJugadorSeleccion] = useState(null);
   const [computadoraSeleccion, setComputadoraSeleccion] = useState(null);
@@ -17,14 +18,17 @@ const JuegoPiedraPapelTijeras = () => {
   const [marcadorComputadora, setMarcadorComputadora] = useState(0);
   const [partidasJugadas, setPartidasJugadas] = useState(0);
 
+  // Maneja el cambio en el campo donde el jugador ingresa su nombre//
   const handleNombreChange = (event) => {
     setJugadorNombre(event.target.value);
   };
 
+  // Determina el ganador de una jugada y actualiza el estado.//
   const determinarGanador = (eleccionJugador, eleccionComputadora) => {
     let nuevoMarcadorJugador = marcadorJugador;
     let nuevoMarcadorComputadora = marcadorComputadora;
 
+    // Lógica para determinar el ganador y actualizar el estado//
     let resultado;
     if (eleccionJugador === eleccionComputadora) {
       resultado = 'Empate';
@@ -39,12 +43,13 @@ const JuegoPiedraPapelTijeras = () => {
       resultado = 'La computadora ganó';
       nuevoMarcadorComputadora++;
     }
-
+    // Actualiza el resultado, los marcadores y las partidas jugadas//
     setResultado(resultado);
     setPartidasJugadas(partidasJugadas + 1);
     setMarcadorJugador(nuevoMarcadorJugador);
     setMarcadorComputadora(nuevoMarcadorComputadora);
 
+    // Comprueba si alguien ha ganado el juego o si hay empate//
     if (nuevoMarcadorJugador >= 3) {
       alert('¡Felicidades! Has ganado el juego.');
       reiniciarJuego();
@@ -57,6 +62,8 @@ const JuegoPiedraPapelTijeras = () => {
     }
   };
 
+  // El jugador debe ingresar su nombre para jugar, se lo alerta si no lo hace/
+  // Lógica para realizar una jugada y determinar al ganador//
   const jugar = (eleccionJugador) => {
     if (!jugadorNombre) {
       alert('Por favor, ingresa tu nombre antes de jugar.');
@@ -71,7 +78,7 @@ const JuegoPiedraPapelTijeras = () => {
     setJugadorSeleccion(eleccionJugador);
     setComputadoraSeleccion(eleccionComputadora);
   };
-
+  // Reinicia el juego y los estados a su estado inicial//
   const reiniciarJuego = () => {
     setJugadorNombre('');
     setJugadorSeleccion(null);
@@ -82,7 +89,7 @@ const JuegoPiedraPapelTijeras = () => {
     setMarcadorComputadora(0);
   };
 
-// Retorno cada uno de los componentes //
+// Renderiza cada uno de los componentes en el orden establecido//
   return (
     <div className="juego-container">
       <Nombre
@@ -96,8 +103,8 @@ const JuegoPiedraPapelTijeras = () => {
       
       <Botones jugar ={jugar}/>
 
-       {/* Componente Jugadas */}
-       {jugadorSeleccion && (
+      
+      {jugadorSeleccion && (
         <Jugadas
           jugadorSeleccion={jugadorSeleccion}
           computadoraSeleccion={computadoraSeleccion}
@@ -109,4 +116,4 @@ const JuegoPiedraPapelTijeras = () => {
   );
 };
 
-export default JuegoPiedraPapelTijeras;
+export default JuegoPiedraPapelTijeras; //exporta el componente principal//
